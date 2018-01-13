@@ -1,0 +1,36 @@
+<form method="POST" action="/translate_ru_word">
+    <div class="text-center">
+        <h2>MAIN PAGE</h2>
+    </div>
+    <div class="card-divider">
+        <div class="card-section">
+            <div class="medium-6 cell">
+                <label>Word (RU)
+                    <input name="ru_value" type="text" placeholder="Enter RU word">
+                </label>
+                <p>Word: <%= @ru_word %></p>
+                <p>Translate: <%= @en_translate %></p>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="accept button" value="TRANSLATE (RU->EN)">
+            </div>
+        </div>
+    </div>
+</form>
+<p></p>
+<form method="POST" action="/translate_en_word">
+    <div class="card-divider">
+        <div class="card-section">
+            <div class="medium-6 cell">
+                <label>Word (EN)
+                    <input name="en_value" type="text" placeholder="Enter EN word">
+                </label>
+                <p>Word: <%= @en_word %></p>
+                <p>Translate: <%= @ru_translate %></p>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="accept button" value="TRANSLATE (EN->RU)">
+            </div>
+        </div>
+    </div>
+</form>

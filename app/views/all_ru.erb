@@ -1,0 +1,53 @@
+<h2 class="text-center">ALL RU-EN WORDS</h2>
+<form method="POST" action="/add_ru_en">
+    <div class="card-divider">
+        <div class="card-section">
+            <div class="medium-6 cell">
+                <label>Word (RU)
+                    <input name="ru_word" type="text" placeholder="Enter RU word">
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Translate (EN)
+                    <input name="en_translate" type="text" placeholder="Enter EN translate">
+                </label>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="accept button" value="ADD (RU->EN)">
+                <input name="ru_checkbox" id="ru_checkbox" type="checkbox"><label for="ru_checkbox">Update</label>
+            </div>
+        </div>
+    </div>
+</form>
+<p></p>
+<form method="POST" action="/delete_ru_en">
+    <div class="card-divider">
+        <div class="card-section">
+            <div class="medium-6 cell">
+                <label>Word (RU)
+                    <input name="del_word" type="text" placeholder="Enter RU word">
+                </label>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="accept button" value="DELETE (RU->EN)">
+            </div>
+        </div>
+    </div>
+</form>
+<p></p>
+<table class="unstriped">
+    <thead>
+        <tr>
+            <th>RU</th>
+            <th>EN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @result.each do |key, value| %>
+            <tr>
+                <td><%= key %></td>
+                <td><%= value %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

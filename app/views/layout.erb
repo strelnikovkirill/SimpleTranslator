@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Translate Web App</title>
+        <link rel="stylesheet" href="/css/foundation.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="text-center">
+                <h1>TRANSLATOR</h1>
+                <a href="/" class="button">MAIN</a>
+                <a href="/all/ru" class="button">ALL RU-EN</a>
+                <a href="/all/en" class="button">ALL EN-RU</a>
+                <a href="/about" class="button">ABOUT</a>
+            </div>
+            <div class="large-12 cell">
+                <%= yield %>
+            </div>
+        </div>
+        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/vendor/what-input.js"></script>
+        <script src="/js/vendor/foundation.js"></script>
+    </body>
+</html>
